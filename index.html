@@ -10,12 +10,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <script src="javascript/script.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
 </head>
 <body>
     <header>
         <h1>Pokedex</h1>
     </header>
     <main>
+        <section class="buttons">
+            <button data-filter=".type-fire">Fuego</button>
+            <button data-filter=".type-water">Agua</button>
+            <button data-filter=".type-grass">Planta</button>
+        </section>
+        <section class="poke-cont">
+            <div class="card type">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="">
+                <p class="number">4</p>
+                <h2 class="name">Charmander</h2>
+                <p>Tipo: Fuego</p>
+            </div>
+            <div class="card type">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="">
+                <p class="number">7</p>
+                <h2 class="name">Squirtle</h2>
+                <p>Tipo: Agua</p>
+            </div>
+            <div class="card type">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
+                <p class="number">1</p>
+                <h2 class="name">Bulbasaur</h2>
+                <p>Tipo: Planta</p>
+            </div>
+        </section>
         
     </main>
     <footer>
