@@ -30,7 +30,7 @@ h1{
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-}
+}*/
 
 .poke-cont{
     width: 90%;
@@ -43,7 +43,6 @@ h1{
 }
 
 .poke-cont .card{
-    background-color: aliceblue;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 0.8rem;
@@ -51,4 +50,30 @@ h1{
     width: 150px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background: gray; /* Color por defecto */
+    color: black;
 }
+
+
+
+
+
+
+button[data-filter=".type-normal"] { background-color: #A8A77A; }
+button[data-filter=".type-fire"] { background-color: #EE8130; }
+button[data-filter=".type-water"] { background-color: #6390F0; }
+button[data-filter=".type-electric"] { background-color: #F7D02C; }
+button[data-filter=".type-grass"] { background-color: #7AC74C; }
+button[data-filter=".type-ice"] { background-color: #96D9D6; }
+button[data-filter=".type-fighting"] { background-color: #C22E28; }
+button[data-filter=".type-poison"] { background-color: #A33EA1; }
+button[data-filter=".type-ground"] { background-color: #E2BF65; }
+button[data-filter=".type-flying"] { background-color: #A98FF3; }
+button[data-filter=".type-psychic"] { background-color: #F95587; }
+button[data-filter=".type-bug"] { background-color: #A6B91A; }
+button[data-filter=".type-rock"] { background-color: #B6A136; }
+button[data-filter=".type-ghost"] { background-color: #735797; }
+button[data-filter=".type-dragon"] { background-color: #6F35FC; }
+button[data-filter=".type-dark"] { background-color: #705746; }
+button[data-filter=".type-steel"] { background-color: #B7B7CE; }
+button[data-filter=".type-fairy"] { background-color: #D685AD; }
