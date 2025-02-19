@@ -19,25 +19,34 @@
     </header>
     <main>
         <section class="buttons">
-            <button data-filter="*">Todos</button>
-            <button data-filter=".type-steel">Acero</button>
-            <button data-filter=".type-water">Agua</button>
-            <button data-filter=".type-bug">Bicho</button>
-            <button data-filter=".type-dragon">Dragón</button>
-            <button data-filter=".type-electric">Eléctrico</button>
-            <button data-filter=".type-ghost">Fantasma</button>
-            <button data-filter=".type-fire">Fuego</button>
-            <button data-filter=".type-fairy">Hada</button>
-            <button data-filter=".type-ice">Hielo</button>
-            <button data-filter=".type-fighting">Lucha</button>
-            <button data-filter=".type-normal">Normal</button>
-            <button data-filter=".type-grass">Planta</button>
-            <button data-filter=".type-psychic">Psíquico</button>
-            <button data-filter=".type-rock">Roca</button>
-            <button data-filter=".type-dark">Siniestro</button>
-            <button data-filter=".type-ground">Tierra</button>
-            <button data-filter=".type-poison">Veneno</button>
-            <button data-filter=".type-flying">Volador</button>
+            <button class="filter" data-filter="*">Todos</button>
+            <button class="sort" data-sort-by="number">Número</button>
+            <button class="sort" data-sort-by="name">Alfabéticamente</button>
+
+            <button class="filter" data-filter=".type-steel">Acero</button>
+            <button class="filter" data-filter=".type-water">Agua</button>
+            <button class="filter" data-filter=".type-bug">Bicho</button>
+            <button class="filter" data-filter=".type-dragon">Dragón</button>
+            <button class="filter" data-filter=".type-electric">Eléctrico</button>
+            <button class="filter" data-filter=".type-ghost">Fantasma</button>
+            <button class="filter" data-filter=".type-fire">Fuego</button>
+            <button class="filter" data-filter=".type-fairy">Hada</button>
+            <button class="filter" data-filter=".type-ice">Hielo</button>
+            <button class="filter" data-filter=".type-fighting">Lucha</button>
+            <button class="filter" data-filter=".type-normal">Normal</button>
+            <button class="filter" data-filter=".type-grass">Planta</button>
+            <button class="filter" data-filter=".type-psychic">Psíquico</button>
+            <button class="filter" data-filter=".type-rock">Roca</button>
+            <button class="filter" data-filter=".type-dark">Siniestro</button>
+            <button class="filter" data-filter=".type-ground">Tierra</button>
+            <button class="filter" data-filter=".type-poison">Veneno</button>
+            <button class="filter" data-filter=".type-flying">Volador</button>
+
+            <button class="filter" data-filter=".sp-mega">Mega</button>
+            <button class="filter" data-filter=".sp-regional">Regional</button>
+
+
+
 
         </section>
         <section class="poke-cont">
@@ -59,6 +68,12 @@
                 <h2 class="name">Venusaur</h2>
                 <p>Tipo: Planta/Veneno</p>
             </div>
+            <div class="card type-grass type-poison sp-mega">
+                <p class="number">3</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10033.png" alt="">
+                <h2 class="name">M-Venusaur</h2>
+                <p>Tipo: Planta/Veneno</p>
+            </div>
             <div class="card type-fire">
                 <p class="number">4</p>
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="">
@@ -77,6 +92,18 @@
                 <h2 class="name">Charizard</h2>
                 <p>Tipo: Fuego/Volador</p>
             </div>
+            <div class="card type-fire type-dragon sp-mega">
+                <p class="number">6</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10034.png" alt="">
+                <h2 class="name">M-Charizard X</h2>
+                <p>Tipo: Fuego/Dragón</p>
+            </div>
+            <div class="card type-fire type-flying sp-mega">
+                <p class="number">6</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10035.png" alt="">
+                <h2 class="name">M-Charizard Y</h2>
+                <p>Tipo: Fuego/Volador</p>
+            </div>
             <div class="card type-water">
                 <p class="number">7</p>
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="">
@@ -93,6 +120,12 @@
                 <p class="number">9</p>
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" alt="">
                 <h2 class="name">Blastoise</h2>
+                <p>Tipo: Agua</p>
+            </div>
+            <div class="card type-water sp-mega">
+                <p class="number">9</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10036.png" alt="">
+                <h2 class="name">M-Blastoise</h2>
                 <p>Tipo: Agua</p>
             </div>
             <div class="card type-bug">
@@ -129,6 +162,12 @@
                 <p class="number">15</p>
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png" alt="">
                 <h2 class="name">Beedrill</h2>
+                <p>Tipo: Bicho/Veneno</p>
+            </div>
+            <div class="card type-bug type-poison sp-mega">
+                <p class="number">15</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10090.png" alt="">
+                <h2 class="name">M-Beedrill</h2>
                 <p>Tipo: Bicho/Veneno</p>
             </div>
             <div class="card type-normal type-flying">
@@ -244,6 +283,102 @@
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png" alt="">
                 <h2 class="name">Nidoking</h2>
                 <p>Tipo: Veneno/Tierra</p>
+            </div>
+            <div class="card type-fairy">
+                <p class="number">35</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png" alt="">
+                <h2 class="name">Clefairy</h2>
+                <p>Tipo: Hada</p>
+            </div>
+            <div class="card type-fairy">
+                <p class="number">36</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png" alt="">
+                <h2 class="name">Clefable</h2>
+                <p>Tipo: Hada</p>
+            </div>
+            <div class="card type-fire">
+                <p class="number">37</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png" alt="">
+                <h2 class="name">Vulpix</h2>
+                <p>Tipo: Fuego</p>
+            </div>
+            <div class="card type-fire">
+                <p class="number">38</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png" alt="">
+                <h2 class="name">Ninetales</h2>
+                <p>Tipo: Fuego</p>
+            </div>
+            <div class="card type-normal type-fairy">
+                <p class="number">39</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png" alt="">
+                <h2 class="name">Jigglypuff</h2>
+                <p>Tipo: Normal/Hada</p>
+            </div>
+            <div class="card type-normal type-fairy">
+                <p class="number">40</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png" alt="">
+                <h2 class="name">Wigglytuff</h2>
+                <p>Tipo: Normal/Hada</p>
+            </div>
+            <div class="card type-poison type-flying">
+                <p class="number">41</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png" alt="">
+                <h2 class="name">Zubat</h2>
+                <p>Tipo: Veneno/Volador</p>
+            </div>
+            <div class="card type-poison type-flying">
+                <p class="number">42</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png" alt="">
+                <h2 class="name">Golbat</h2>
+                <p>Tipo: Veneno/Volador</p>
+            </div>
+            <div class="card type-grass type-poison">
+                <p class="number">43</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png" alt="">
+                <h2 class="name">Oddish</h2>
+                <p>Tipo: Planta/Veneno</p>
+            </div>
+            <div class="card type-grass type-poison">
+                <p class="number">44</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png" alt="">
+                <h2 class="name">Gloom</h2>
+                <p>Tipo: Planta/Veneno</p>
+            </div>
+            <div class="card type-grass type-poison">
+                <p class="number">45</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png" alt="">
+                <h2 class="name">Vileplume</h2>
+                <p>Tipo: Planta/Veneno</p>
+            </div>
+            <div class="card type-bug type-grass">
+                <p class="number">46</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png" alt="">
+                <h2 class="name">Paras</h2>
+                <p>Tipo: Bicho/Planta</p>
+            </div>
+            <div class="card type-bug type-grass">
+                <p class="number">47</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png" alt="">
+                <h2 class="name">Parasect</h2>
+                <p>Tipo: Bicho/Planta</p>
+            </div>
+            <div class="card type-bug type-poison">
+                <p class="number">48</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png" alt="">
+                <h2 class="name">Venonat</h2>
+                <p>Tipo: Bicho/Veneno</p>
+            </div>
+            <div class="card type-bug type-poison">
+                <p class="number">49</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png" alt="">
+                <h2 class="name">Venomoth</h2>
+                <p>Tipo: Bicho/Veneno</p>
+            </div>
+            <div class="card type-ground">
+                <p class="number">50</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png" alt="">
+                <h2 class="name">Diglett</h2>
+                <p>Tipo: Tierra</p>
             </div>
             
         </section>

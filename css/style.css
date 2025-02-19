@@ -33,12 +33,15 @@ h1{
 }*/
 
 .poke-cont{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px
+
+}
+h2{
 
 }
 
@@ -47,12 +50,13 @@ h1{
     border-radius: 10px;
     padding: 0.8rem;
     margin: 0.8rem;
-    width: 150px;
+    width: 11%;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     background: gray; /* Color por defecto */
     color: black;
 }
+
 
 
 
@@ -77,3 +81,5 @@ button[data-filter=".type-dragon"] { background-color: #6F35FC; }
 button[data-filter=".type-dark"] { background-color: #705746; }
 button[data-filter=".type-steel"] { background-color: #B7B7CE; }
 button[data-filter=".type-fairy"] { background-color: #D685AD; }
+button[data-filter=".sp-regional"] { background-color: #ffffff; color: #000000; }
+button[data-filter=".sp-mega"] {     background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);}

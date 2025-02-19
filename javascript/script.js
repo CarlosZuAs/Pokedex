@@ -6,10 +6,14 @@ $(document).ready(function(){
     $pokeCont.isotope({
         // options
         itemSelector: '.card',
-        layoutMode: 'fitRows'
+        layoutMode: 'fitRows',
+        getSortData: {
+          name: ".name",
+          number: ".number parseInt"
+        }
       });
 
-      $(".buttons button").on("click", function(){
+      $(".buttons .filter").on("click", function(){
         let filterVal = $(this).data("filter");
         $pokeCont.isotope({
             filter: filterVal
@@ -17,7 +21,17 @@ $(document).ready(function(){
       });
 
 
+      $(".buttons .sort").on("click", function(){
+        let sortVal = $(this).data("sort-by");
+        $pokeCont.isotope({
+            sortBy: sortVal
+        })
+      });
+
+
 })
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const typeColors = {
@@ -46,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
       let types = Array.from(card.classList)
           .filter(cls => cls.startsWith("type-"))
           .map(cls => cls.replace("type-", "")); // Extraer solo el nombre del tipo
-
       if (types.length === 2) {
           // Si tiene dos tipos, aplicar degradado
           card.style.background = `linear-gradient(135deg, ${typeColors[types[0]]} 50%, ${typeColors[types[1]]} 50%)`;
