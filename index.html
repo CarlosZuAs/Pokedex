@@ -19,7 +19,7 @@
     </header>
     <main>
         <section class="buttons">
-            <button class="filter" data-filter="*">Todos</button>
+            <button class="filter reset" data-filter="*">Todos</button>
             <button class="sort" data-sort-by="number">Número</button>
             <button class="sort" data-sort-by="name">Alfabéticamente</button>
 
@@ -49,6 +49,8 @@
 
 
         </section>
+        <p id="count">Pokémon seleccionados: 0</p>
+
         <section class="poke-cont">
             <div class="card type-grass type-poison">
                 <p class="number">1</p>
@@ -1004,11 +1006,251 @@
                 <h2 class="name">Mr. Mime</h2>
                 <p>Tipo: Psíquico/Hada</p>
             </div>
-            <div class="card type-psychic type-ice">
+            <div class="card type-ice type-psychic sp-regional">
                 <p class="number">122</p>
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10168.png" alt="">
                 <h2 class="name">Mr. Mime Galar</h2>
-                <p>Tipo: Psíquico/Ice</p>
+                <p>Tipo: Hielo/Psíquico</p>
+            </div>
+            <div class="card type-bug type-flying">
+                <p class="number">123</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png" alt="">
+                <h2 class="name">Scyther</h2>
+                <p>Tipo: Bicho/Volador</p>
+            </div>
+            <div class="card type-ice type-psychic">
+                <p class="number">124</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png" alt="">
+                <h2 class="name">Jynx</h2>
+                <p>Tipo: Hielo/Psíquico</p>
+            </div>
+            <div class="card type-electric">
+                <p class="number">125</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png" alt="">
+                <h2 class="name">Electabuzz</h2>
+                <p>Tipo: Eléctrico</p>
+            </div>
+            <div class="card type-fire">
+                <p class="number">126</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png" alt="">
+                <h2 class="name">Magmar</h2>
+                <p>Tipo: Fuego</p>
+            </div>
+            <div class="card type-bug">
+                <p class="number">127</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png" alt="">
+                <h2 class="name">Pinsir</h2>
+                <p>Tipo: Bicho</p>
+            </div>
+            <div class="card type-bug type-flying sp-mega">
+                <p class="number">127</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10040.png" alt="">
+                <h2 class="name">Mega Pinsir</h2>
+                <p>Tipo: Bicho/Volador</p>
+            </div>
+            <div class="card type-normal">
+                <p class="number">128</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png" alt="">
+                <h2 class="name">Tauros</h2>
+                <p>Tipo: Normal</p>
+            </div>
+            <div class="card type-fighting sp-regional">
+                <p class="number">128</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10250.png" alt="">
+                <h2 class="name">Tauros Paldea</h2>
+                <p>Tipo: Lucha</p>
+            </div>
+            <div class="card type-fighting type-fire sp-regional">
+                <p class="number">128</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10251.png" alt="">
+                <h2 class="name">Tauros Paldea-F</h2>
+                <p>Tipo: Lucha/Fuego</p>
+            </div>
+            <div class="card type-fighting type-water sp-regional">
+                <p class="number">128</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10252.png" alt="">
+                <h2 class="name">Tauros Paldea-W</h2>
+                <p>Tipo: Lucha/Agua</p>
+            </div>
+            <div class="card type-water">
+                <p class="number">129</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png" alt="">
+                <h2 class="name">Magikarp</h2>
+                <p>Tipo: Agua</p>
+            </div>
+            <div class="card type-water type-flying">
+                <p class="number">130</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png" alt="">
+                <h2 class="name">Gyarados</h2>
+                <p>Tipo: Agua/Volador</p>
+            </div>
+            <div class="card type-water type-dark sp-mega">
+                <p class="number">130</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10041.png" alt="">
+                <h2 class="name">Mega Gyarados</h2>
+                <p>Tipo: Agua/Siniestro</p>
+            </div>
+            <div class="card type-water type-ice">
+                <p class="number">131</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png" alt="">
+                <h2 class="name">Lapras</h2>
+                <p>Tipo: Agua/Hielo</p>
+            </div>
+            <div class="card type-normal">
+                <p class="number">132</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="">
+                <h2 class="name">Ditto</h2>
+                <p>Tipo: Normal</p>
+            </div>
+            <div class="card type-normal">
+                <p class="number">133</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png" alt="">
+                <h2 class="name">Eevee</h2>
+                <p>Tipo: Normal</p>
+            </div>
+            <div class="card type-water">
+                <p class="number">134</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png" alt="">
+                <h2 class="name">Vaporeon</h2>
+                <p>Tipo: Agua</p>
+            </div>
+            <div class="card type-electric">
+                <p class="number">135</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png" alt="">
+                <h2 class="name">Jolteon</h2>
+                <p>Tipo: Eléctrico</p>
+            </div>
+            <div class="card type-fire">
+                <p class="number">136</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png" alt="">
+                <h2 class="name">Flareon</h2>
+                <p>Tipo: Fuego</p>
+            </div>
+            <div class="card type-normal">
+                <p class="number">137</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png" alt="">
+                <h2 class="name">Porygon</h2>
+                <p>Tipo: Normal</p>
+            </div>
+            <div class="card type-rock type-water">
+                <p class="number">138</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png" alt="">
+                <h2 class="name">Omanyte</h2>
+                <p>Tipo: Roca/Agua</p>
+            </div>
+            <div class="card type-rock type-water">
+                <p class="number">139</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png" alt="">
+                <h2 class="name">Omastar</h2>
+                <p>Tipo: Roca/Agua</p>
+            </div>
+            <div class="card type-rock type-water">
+                <p class="number">140</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png" alt="">
+                <h2 class="name">Kabuto</h2>
+                <p>Tipo: Roca/Agua</p>
+            </div>
+            <div class="card type-rock type-water">
+                <p class="number">141</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png" alt="">
+                <h2 class="name">Kabutops</h2>
+                <p>Tipo: Roca/Agua</p>
+            </div>
+            <div class="card type-rock type-flying">
+                <p class="number">142</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png" alt="">
+                <h2 class="name">Aerodactyl</h2>
+                <p>Tipo: Roca/Volador</p>
+            </div>
+            <div class="card type-rock type-flying sp-mega">
+                <p class="number">142</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10042.png" alt="">
+                <h2 class="name">Mega Aerodactyl</h2>
+                <p>Tipo: Roca/Volador</p>
+            </div>
+            <div class="card type-normal">
+                <p class="number">143</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png" alt="">
+                <h2 class="name">Snorlax</h2>
+                <p>Tipo: Normal</p>
+            </div>
+            <div class="card type-ice type-flying">
+                <p class="number">144</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png" alt="">
+                <h2 class="name">Articuno</h2>
+                <p>Tipo: Hielo/Volador</p>
+            </div>
+            <div class="card type-psychic type-flying sp-regional">
+                <p class="number">144</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10169.png" alt="">
+                <h2 class="name">Articuno Galar</h2>
+                <p>Tipo: Psíquico/Volador</p>
+            </div>
+            <div class="card type-electric type-flying">
+                <p class="number">145</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png" alt="">
+                <h2 class="name">Zapdos</h2>
+                <p>Tipo: Eléctrico/Volador</p>
+            </div>
+            <div class="card type-fighting type-flying sp-regional">
+                <p class="number">145</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10170.png" alt="">
+                <h2 class="name">Zapdos Galar</h2>
+                <p>Tipo: Lucha/Volador</p>
+            </div>
+            <div class="card type-fire type-flying">
+                <p class="number">146</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png" alt="">
+                <h2 class="name">Moltres</h2>
+                <p>Tipo: Fuego/Volador</p>
+            </div>
+            <div class="card type-dark type-flying sp-regional">
+                <p class="number">146</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10171.png" alt="">
+                <h2 class="name">Moltres Galar</h2>
+                <p>Tipo: Siniestro/Volador</p>
+            </div>
+            <div class="card type-dragon">
+                <p class="number">147</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png" alt="">
+                <h2 class="name">Dratini</h2>
+                <p>Tipo: Dragón</p>
+            </div>
+            <div class="card type-dragon">
+                <p class="number">148</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png" alt="">
+                <h2 class="name">Dragonair</h2>
+                <p>Tipo: Dragón</p>
+            </div>
+            <div class="card type-dragon type-flying">
+                <p class="number">149</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png" alt="">
+                <h2 class="name">Dragonite</h2>
+                <p>Tipo: Dragón/Volador</p>
+            </div>
+            <div class="card type-psychic">
+                <p class="number">150</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png" alt="">
+                <h2 class="name">Mewtwo</h2>
+                <p>Tipo: Psíquico</p>
+            </div>
+            <div class="card type-psychic type-fighting sp-mega">
+                <p class="number">150</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10043.png" alt="">
+                <h2 class="name">Mega Mewtwo X</h2>
+                <p>Tipo: Psíquico/Lucha</p>
+            </div>
+            <div class="card type-psychic sp-mega">
+                <p class="number">150</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10044.png" alt="">
+                <h2 class="name">Mega Mewtwo Y</h2>
+                <p>Tipo: Psíquico</p>
+            </div>
+            <div class="card type-psychic">
+                <p class="number">151</p>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png" alt="">
+                <h2 class="name">Mew</h2>
+                <p>Tipo: Psíquico</p>
             </div>
             
 

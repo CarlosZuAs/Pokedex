@@ -27,7 +27,7 @@ h1{
     background-color: #4caf50;
     color: aliceblue;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
 }*/
@@ -58,6 +58,14 @@ h2{
 }
 
 
+#count {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
 
 
 
@@ -83,3 +91,9 @@ button[data-filter=".type-steel"] { background-color: #B7B7CE; }
 button[data-filter=".type-fairy"] { background-color: #D685AD; }
 button[data-filter=".sp-regional"] { background-color: #ffffff; color: #000000; }
 button[data-filter=".sp-mega"] {     background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);}
+
+.buttons .filter.active {
+    color: black;
+    font-weight: bold;
+
+}

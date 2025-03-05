@@ -1,36 +1,116 @@
+
+
 $(document).ready(function(){
-    console.log("online");
+  console.log("online");
 
-    let $pokeCont = $(".poke-cont");
+  let $pokeCont = $(".poke-cont");
+  let filters = []; // Array para almacenar los filtros activos
 
-    $pokeCont.isotope({
-        // options
-        itemSelector: '.card',
-        layoutMode: 'fitRows',
-        getSortData: {
+  $pokeCont.isotope({
+      itemSelector: '.card',
+      layoutMode: 'fitRows',
+      getSortData: {
           name: ".name",
           number: ".number parseInt"
-        }
-      });
+      }
+  });
 
-      $(".buttons .filter").on("click", function(){
-        let filterVal = $(this).data("filter");
-        $pokeCont.isotope({
-            filter: filterVal
-        })
-      });
+  // Función para actualizar el contador de Pokémon visibles
+  function updateCount() {
+      let visibleCount = $pokeCont.data('isotope').filteredItems.length;
+      $("#count").text(`Pokémon seleccionados: ${visibleCount}`);
+  }
+
+  // Manejar filtros múltiples
+  $(".buttons .filter").on("click", function(){
+      let filterVal = $(this).data("filter");
+
+      // Si el filtro ya está activo, quitarlo; si no, añadirlo
+      if (filters.includes(filterVal)) {
+          filters = filters.filter(f => f !== filterVal); // Eliminar filtro
+          $(this).removeClass("active"); // Quitar estilo activo
+      } else {
+          filters.push(filterVal); // Agregar filtro
+          $(this).addClass("active"); // Marcar botón como activo
+      }
+
+      // Combinar filtros con lógica OR (puedes cambiar a lógica AND si lo prefieres)
+      //let filterString = filters.length ? filters.join(", ") : "*";
+      let filterString = filters.length ? filters.join("") : "*";
 
 
-      $(".buttons .sort").on("click", function(){
-        let sortVal = $(this).data("sort-by");
-        $pokeCont.isotope({
-            sortBy: sortVal
-        })
-      });
+      // Aplicar filtros
+      $pokeCont.isotope({ filter: filterString });
+
+      updateCount(); // Actualizar contador
+  });
+
+  // Ordenar Pokémon
+  $(".buttons .sort").on("click", function(){
+      let sortVal = $(this).data("sort-by");
+      $pokeCont.isotope({ sortBy: sortVal });
+  });
+
+  $(".buttons .reset").on("click", function(){
+    filters = []; // Vaciar el array de filtros
+    $(".buttons .filter").removeClass("active"); // Quitar la clase activa de todos los botones
+    $pokeCont.isotope({ filter: "*" }); // Mostrar todos los Pokémon
+    updateCount(); // Actualizar contador
+});
+
+  // Evento cuando cambia la disposición de elementos
+  $pokeCont.on('arrangeComplete', function() {
+      updateCount();
+  });
+
+  // Inicializar contador al cargar la página
+  updateCount();
+});
 
 
-})
+/*
+$(document).ready(function(){
+  console.log("online");
 
+  let $pokeCont = $(".poke-cont");
+
+  $pokeCont.isotope({
+      // options
+      itemSelector: '.card',
+      layoutMode: 'fitRows',
+      getSortData: {
+        name: ".name",
+        number: ".number parseInt"
+      }
+  });
+
+  // Función para actualizar el contador de Pokémon visibles
+  function updateCount() {
+      let visibleCount = $pokeCont.data('isotope').filteredItems.length;
+      $("#count").text(`Pokémon seleccionados: ${visibleCount}`);
+  }
+
+  // Filtrar Pokémon
+  $(".buttons .filter").on("click", function(){
+      let filterVal = $(this).data("filter");
+      $pokeCont.isotope({ filter: filterVal });
+      updateCount(); // Actualizar contador después de filtrar
+  });
+
+  // Ordenar Pokémon
+  $(".buttons .sort").on("click", function(){
+      let sortVal = $(this).data("sort-by");
+      $pokeCont.isotope({ sortBy: sortVal });
+  });
+
+  // Evento cuando cambia la disposición de elementos
+  $pokeCont.on('arrangeComplete', function() {
+      updateCount();
+  });
+
+  // Inicializar contador al cargar la página
+  updateCount();
+});*/
 
 
 document.addEventListener("DOMContentLoaded", function () {
