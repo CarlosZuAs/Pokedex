@@ -68,49 +68,7 @@ $(document).ready(function(){
 });
 
 
-/*
-$(document).ready(function(){
-  console.log("online");
 
-  let $pokeCont = $(".poke-cont");
-
-  $pokeCont.isotope({
-      // options
-      itemSelector: '.card',
-      layoutMode: 'fitRows',
-      getSortData: {
-        name: ".name",
-        number: ".number parseInt"
-      }
-  });
-
-  // Función para actualizar el contador de Pokémon visibles
-  function updateCount() {
-      let visibleCount = $pokeCont.data('isotope').filteredItems.length;
-      $("#count").text(`Pokémon seleccionados: ${visibleCount}`);
-  }
-
-  // Filtrar Pokémon
-  $(".buttons .filter").on("click", function(){
-      let filterVal = $(this).data("filter");
-      $pokeCont.isotope({ filter: filterVal });
-      updateCount(); // Actualizar contador después de filtrar
-  });
-
-  // Ordenar Pokémon
-  $(".buttons .sort").on("click", function(){
-      let sortVal = $(this).data("sort-by");
-      $pokeCont.isotope({ sortBy: sortVal });
-  });
-
-  // Evento cuando cambia la disposición de elementos
-  $pokeCont.on('arrangeComplete', function() {
-      updateCount();
-  });
-
-  // Inicializar contador al cargar la página
-  updateCount();
-});*/
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -142,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
           .map(cls => cls.replace("type-", "")); // Extraer solo el nombre del tipo
       if (types.length === 2) {
           // Si tiene dos tipos, aplicar degradado
-          card.style.background = `linear-gradient(135deg, ${typeColors[types[0]]} 50%, ${typeColors[types[1]]} 50%)`;
+          card.style.background = `linear-gradient(120deg, ${typeColors[types[0]]} 50%, ${typeColors[types[1]]} 50%)`;
       } else if (types.length === 1) {
           // Si tiene solo un tipo, aplicar un solo color
           card.style.background = typeColors[types[0]];

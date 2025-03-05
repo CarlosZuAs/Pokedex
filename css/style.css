@@ -11,9 +11,14 @@ body{
     background-color: #003c55;
 }
 
-h1{
-    text-align: center;
-    padding: 50px;
+.title{
+    text-align: center;    
+}
+
+.title img{
+    padding: 64px;
+    width: 512px;
+    height: auto;
 }
 
 .buttons{
@@ -41,16 +46,14 @@ h1{
     gap: 20px
 
 }
-h2{
 
-}
 
 .poke-cont .card{
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 0.8rem;
     margin: 0.8rem;
-    width: 12.5%;
+    width: 12.75%;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     background: gray; /* Color por defecto */
