@@ -71,6 +71,7 @@ $(document).ready(function(){
 
 
 
+
 document.addEventListener("DOMContentLoaded", function () {
   const typeColors = {
       normal: "#A8A77A",
@@ -140,3 +141,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 });
+
+$("p").filter(":not([class])").remove();
+
+
+
+
+
