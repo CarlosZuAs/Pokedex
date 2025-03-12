@@ -2,9 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 200;
+    font-style: normal;
 }
+
+
 
 
 body{
@@ -35,7 +38,11 @@ body{
     padding: 12px 15px;
     cursor: pointer;
     border-radius: 5px;
-}*/
+    width: 11%;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
 
 .poke-cont{
     width: 100%;
@@ -53,11 +60,23 @@ body{
     border-radius: 10px;
     padding: 0.8rem;
     margin: 0.8rem;
-    width: 12.75%;
+    width: 15%;
+    height: 176px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     background: gray; /* Color por defecto */
     color: black;
+
+    font-size: 0.6em;
+
+}
+
+.card img{
+    padding: 8px;
+}
+
+.number{
+    font-size: 1.75em;
 }
 
 
@@ -95,6 +114,17 @@ button[data-filter=".type-fairy"] { background-color: #D685AD; }
 button[data-filter=".sp-regional"] { background-color: #ffffff; color: #000000; }
 button[data-filter=".sp-mega"] {     background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);}
 button[data-filter=".sp-gigamax"] { background-color: #000000; color: #ffffff; }
+
+button[data-filter=".gen1"] { background: linear-gradient(90deg,#C03028,#3B4CCA, #78C850,#E2BF65); }
+button[data-filter=".gen2"] { background: linear-gradient(90deg,#DAA520,#C0C0C0, #4FD9FF); }
+button[data-filter=".gen3"] { background: linear-gradient(90deg,#A00000,#0000A0, #00A000); }
+button[data-filter=".gen4"] { background: linear-gradient(90deg,#AAAAFF,#FFAAAA, #999999); }
+button[data-filter=".gen5"] { background: linear-gradient(90deg,#444444,#EEEEEE); }
+button[data-filter=".gen6"] { background: linear-gradient(90deg,#025DA6,#D80000); }
+button[data-filter=".gen7"] { background: linear-gradient(90deg,#FFCC33,#5599FF); }
+button[data-filter=".gen8"] { background: linear-gradient(90deg,#0079C2,#C92D50); }
+button[data-filter=".gen9"] { background: linear-gradient(90deg,#A30000,#642FBE); }
+
 
 
 .buttons .filter.active {
