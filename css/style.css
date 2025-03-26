@@ -111,9 +111,10 @@ button[data-filter=".type-dragon"] { background-color: #6F35FC; }
 button[data-filter=".type-dark"] { background-color: #705746; }
 button[data-filter=".type-steel"] { background-color: #B7B7CE; }
 button[data-filter=".type-fairy"] { background-color: #D685AD; }
+button[data-filter=".sp-form"] { background-color: #ffffff; color: #000000; }
 button[data-filter=".sp-regional"] { background-color: #ffffff; color: #000000; }
 button[data-filter=".sp-mega"] {     background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);}
-button[data-filter=".sp-gigamax"] { background-color: #000000; color: #ffffff; }
+button[data-filter=".sp-gigamax"] { background-color: #ffffff; color: #000000; }}
 
 button[data-filter=".gen1"] { background: linear-gradient(90deg,#C03028,#3B4CCA, #78C850,#E2BF65); }
 button[data-filter=".gen2"] { background: linear-gradient(90deg,#DAA520,#C0C0C0, #4FD9FF); }
